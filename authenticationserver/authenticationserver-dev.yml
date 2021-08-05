@@ -21,7 +21,7 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: eugenfazekas.mailtrap@gmail.com
-    password: h`aT#2~,Q?n
+    password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d"
     properties:
       mail:
         smtp:

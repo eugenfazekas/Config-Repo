@@ -14,7 +14,7 @@ spring:
         mongodb:
             authentication-database : db_nx
             username : John_Woo
-            password : 2hJ$lDS#nA&8
+            password : "{cipher}9ab20fcbd9aa12128beb9a67eadea40420b9e3bb576e50e49378277195c7d82f"
             database : db_nx
             port : 27017
             host : localhost
