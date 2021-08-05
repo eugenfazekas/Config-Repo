@@ -1,1 +1,48 @@
+server:
+    port: 4800
+    
+logging:
+    level: 
+        com: DEBUG
 
+keystore:
+  password: password
+  privateKey: cronos.jks
+  alias: cronos_server
+
+authentication_server:
+  url: localhost:5432
+  db: db_users
+  username: postgres
+  password: e21Wz44
+  
+spring: 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: eugenfazekas.mailtrap@gmail.com
+    password: h`aT#2~,Q?n
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+
+emailservice:
+  subjecten: Demo Project account activation
+  text1en: Dear
+  text2en: "Thanks for you're registration to our website, and you can sign is with the followed username: "
+  text3en: You can activate you're account by the followed link    
+  validationLink: http://127.0.0.1:4800/user/userKeyCheck/    
+  
+client:
+  secret: secret 
+  
+resource:
+  server:
+    base:
+      url: http://localhost:4880 
+
+resourceServer:
+  client-id: resourceserver
+  client-secret: resourceserversecret
