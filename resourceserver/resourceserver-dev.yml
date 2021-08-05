@@ -6,7 +6,8 @@ spring:
     servlet:
         multipart:
             max-file-size: 10MB
-            max-request-size: 10MB     
+            max-request-size: 10MB
+            
 spring:
     data:
         mongodb:
@@ -15,10 +16,9 @@ spring:
             password : 2hJ$lDS#nA&8
             database : db_nx
             port : 27017
-            host : localhost     
+            host : localhost
+      
 resourceServer:
     client-jwkKeyUri: http://localhost:4800/oauth/token_key
     client-id: resourceserver
     client-secret: resourceserversecret
-server:
-    port: 4880   
