@@ -10,7 +10,7 @@ keystore:
   privateKey: cronos.jks
   alias: cronos_server
 
-authentication_server:
+authentication_database:
   url: localhost:5432
   db: db_users
   username: postgres
@@ -39,10 +39,10 @@ client:
   secret: secret 
   
 resource:
-  server:
+  service:
     base:
       url: http://localhost:4880 
 
-resourceServer:
+resourceService:
   client-id: resourceserver
   client-secret: resourceserversecret
