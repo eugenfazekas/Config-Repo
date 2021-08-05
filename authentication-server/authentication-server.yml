@@ -14,14 +14,14 @@ authentication_server:
   url: postgres:5432
   db: db_users
   username: postgres
-  password: e21Wz44
+  password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d"
   
 spring: 
   mail:
     host: smtp.gmail.com
     port: 587
     username: eugenfazekas.mailtrap@gmail.com
-    password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d"
+    password: "{cipher}2aa6738619358207b4079a8dfc907eb762725da0f037fd616bf66f92391ec960"
     properties:
       mail:
         smtp:
