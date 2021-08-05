@@ -1,5 +1,4 @@
-server:
-    port: 4880
+server.port: 4880
 
 logging:
     level:
