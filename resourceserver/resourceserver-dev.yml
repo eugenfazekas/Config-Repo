@@ -27,4 +27,4 @@ security:
             client-secret: resourceserversecret
         resource:
             jwt:
-                key-uri: http://resourceserver:4800/oauth/token_key  
+                key-uri: http://localhost:4800/oauth/token_key  
