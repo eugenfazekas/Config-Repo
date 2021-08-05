@@ -10,6 +10,7 @@ spring:
         multipart:
             max-file-size: 10MB
             max-request-size: 10MB
+            
     data:
         mongodb:
             authentication-database : db_nx
@@ -17,9 +18,13 @@ spring:
             password : "{cipher}9ab20fcbd9aa12128beb9a67eadea40420b9e3bb576e50e49378277195c7d82f"
             database : db_nx
             port : 27017
-            host : localhost
-      
-resourceServer:
-    client-jwkKeyUri: http://localhost:4800/oauth/token_key
-    client-id: resourceserver
-    client-secret: resourceserversecret
+            host : localhost   
+            
+security:
+    oauth2:
+        client:
+            client-id: resourceserver
+            client-secret: resourceserversecret
+        resource:
+            jwt:
+                key-uri: http://resourceserver:4800/oauth/token_key  
