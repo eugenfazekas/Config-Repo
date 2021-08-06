@@ -33,7 +33,7 @@ emailservice:
   text1en: Dear
   text2en: "Thanks for you're registration to our website, and you can sign is with the followed username: "
   text3en: You can activate you're account by the followed link    
-  validationLink: http://127.0.0.1:4800/authentication-server/v1/user/userKeyCheck/ 
+  validationLink: http://127.0.0.1:4800/api1/v1/user/userKeyCheck/ 
   
 client:
   secret: secret 
