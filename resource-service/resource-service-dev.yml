@@ -18,7 +18,12 @@ spring:
             password : "{cipher}9ab20fcbd9aa12128beb9a67eadea40420b9e3bb576e50e49378277195c7d82f"
             database : db_nx
             port : 27017
-            host : localhost   
+            host : localhost 
+    zipkin:
+        baseUrl: http://localhost:9411
+    sleuth:
+        sampler:
+            percentage: 1        
             
 security:
     oauth2:

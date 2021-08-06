@@ -19,6 +19,11 @@ spring:
             database : db_nx
             port : 27017
             host : mongodb:27017
+    zipkin:
+        baseUrl: http://zipkin:9411
+    sleuth:
+        sampler:
+            percentage: 1         
 
 security:
     oauth2:
@@ -27,4 +32,4 @@ security:
             client-secret: resourceserversecret
         resource:
             jwt:
-                key-uri: http://resourceserver:4800/oauth/token_key            
+                key-uri: http://authenticationservice:4800/oauth/token_key            

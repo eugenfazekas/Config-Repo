@@ -27,6 +27,11 @@ spring:
         smtp:
           starttls:
             enable: true
+  zipkin:
+    baseUrl: http://zipkin:9411
+  sleuth:
+    sampler:
+      percentage: 1          
 
 emailservice:
   subjecten: Demo Project account activation
@@ -41,7 +46,7 @@ client:
 resource:
   service:
     base:
-      url: http://resourceserver:4880 
+      url: http://resourceservice:4880 
     
 resourceService:
   client-id: resourceserver
