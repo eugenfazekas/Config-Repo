@@ -27,7 +27,7 @@ spring:
           filters:
           - RewritePath=/auth/(?<path>.*), /$\{path}
           - RemoveRequestHeader= Cookie,Set-Cookie
-        - id: licensing-service
+        - id: resource-service
           uri: lb://resource-service
           predicates:
           - Path=/resource/**
