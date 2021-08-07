@@ -19,9 +19,9 @@ spring:
     databaseName: "db_users"
     driverClassName: "org.postgresql.Driver"
   mail:
-    host: smtp.gmail.com
+    host: "smtp.gmail.com"
     port: 587
-    username: eugenfazekas.mailtrap@gmail.com
+    username: "eugenfazekas.mailtrap@gmail.com"
     password: "{cipher}2aa6738619358207b4079a8dfc907eb762725da0f037fd616bf66f92391ec960"
     properties:
       mail:
@@ -44,7 +44,7 @@ emailservice:
   text1en: Dear
   text2en: "Thanks for you're registration to our website, and you can sign is with the followed username: "
   text3en: You can activate you're account by the followed link    
-  validationLink: http://127.0.0.1:4800/api1/v1/user/userKeyCheck/     
+  validationLink: http://127.0.0.1:5555/api1/v1/user/userKeyCheck/     
   
 client:
   secret: secret 
