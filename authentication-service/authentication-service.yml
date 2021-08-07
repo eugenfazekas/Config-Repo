@@ -9,14 +9,14 @@ keystore:
   password: password
   privateKey: cronos.jks
   alias: cronos_server
-
-authentication_database:
-  url: postgres:5432
-  db: db_users
-  username: postgres
-  password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d"
-  
-spring: 
+ 
+spring:
+  datasource: 
+    url: "postgres:5432"
+    username: "postgres"
+    password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d"
+  database:
+    driverClassName: "org.postgresql.Driver"
   mail:
     host: smtp.gmail.com
     port: 587

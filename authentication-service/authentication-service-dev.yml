@@ -9,19 +9,19 @@ keystore:
   password: password
   privateKey: cronos.jks
   alias: cronos_server
-
-authentication_database:
-  url: localhost:5432
-  db: db_users
-  username: postgres
-  password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d" 
-  
-spring: 
+ 
+spring:
+  datasource: 
+    url: "localhost:5432"
+    username: "postgres"
+    password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d"
+  database:
+    driverClassName: "org.postgresql.Driver" 
   mail:
     host: smtp.gmail.com
     port: 587
     username: eugenfazekas.mailtrap@gmail.com
-    password: "{cipher}2aa6738619358207b4079a8dfc907eb762725da0f037fd616bf66f92391ec960"          
+    password: "{cipher}2aa6738619358207b4079a8dfc907eb762725da0f037fd616bf66f92391ec960"
     properties:
       mail:
         smtp:
@@ -32,6 +32,11 @@ spring:
   sleuth:
     sampler:
       percentage: 1
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/      
 
 emailservice:
   subjecten: Demo Project account activation
