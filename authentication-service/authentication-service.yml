@@ -31,7 +31,12 @@ spring:
     baseUrl: http://zipkin:9411
   sleuth:
     sampler:
-      percentage: 1          
+      percentage: 1 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaserver:8761/eureka/
 
 emailservice:
   subjecten: Demo Project account activation
