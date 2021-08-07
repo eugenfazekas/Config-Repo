@@ -28,6 +28,7 @@ spring:
         smtp:
           starttls:
             enable: true
+          auth: true  
   zipkin:
     baseUrl: http://localhost:9411
   sleuth:
