@@ -16,6 +16,7 @@ spring:
     username: "postgres"
     password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d"
   database:
+    databaseName: "db_users"
     driverClassName: "org.postgresql.Driver" 
   mail:
     host: smtp.gmail.com
