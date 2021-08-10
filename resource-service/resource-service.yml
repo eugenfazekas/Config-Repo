@@ -24,7 +24,18 @@ spring:
     sleuth:
         sampler:
             percentage: 1
-
+    cloud:
+        stream:
+            bindings:
+                input:
+                    destination: userDetailsPrepare
+                    content-type: application/json
+                    group: userDetailsPrepareGrup  
+            kafka:
+                binder:
+                    zkNodes: kafkaserver
+                    brokers: kafkaserver  
+                
 eureka:
   client:
     serviceUrl:
