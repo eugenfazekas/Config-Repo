@@ -42,8 +42,8 @@ spring:
           content-type: application/json 
       kafka:
         binder:
-          zkNodes: kafka
-          brokers: kafka      
+          zkNodes: kafkaserver
+          brokers: kafkaserver    
 
 eureka:
   client:

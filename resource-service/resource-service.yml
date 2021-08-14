@@ -33,8 +33,8 @@ spring:
                     group: userDetailsPrepareGrup  
             kafka:
                 binder:
-                    zkNodes: kafka
-                    brokers: kafka  
+                    zkNodes: kafkaserver
+                    brokers: kafkaserver  
                 
 eureka:
   client:
@@ -48,4 +48,8 @@ security:
             client-secret: resourceserversecret
         resource:
             jwt:
-                key-uri: http://authenticationservice:4800/oauth/token_key            
+                key-uri: http://authenticationservice:4800/oauth/token_key  
+
+redis:
+    server: redis
+    port: 6379                 
