@@ -50,6 +50,6 @@ security:
             jwt:
                 key-uri: http://authenticationservice:4800/oauth/token_key  
 
-redis:
+redisserver:
     server: redis
     port: 6379                 
