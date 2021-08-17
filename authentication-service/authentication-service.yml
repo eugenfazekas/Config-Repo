@@ -33,7 +33,7 @@ spring:
     baseUrl: http://zipkin:9411
   sleuth:
     sampler:
-      percentage: 1
+      rate: 100 
   cloud:
     stream:
       bindings:
