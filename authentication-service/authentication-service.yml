@@ -59,13 +59,9 @@ emailservice:
 
 client:
   secret: secret 
-  
-resource:
-  service:
-    base:
-      url: http://resourceservice:4880 
     
 resourceService:
   client-id: resourceserver
   client-secret: resourceserversecret
+  createUserResourceUrl: http://resource-service/api2/v1/user/createUserResource
 
