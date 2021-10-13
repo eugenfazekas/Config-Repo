@@ -33,8 +33,8 @@ spring:
                     group: userDetailsPrepareGrup  
             kafka:
                 binder:
-                    zkNodes: 127.0.0.1
-                    brokers: 127.0.0.1          
+                    zkNodes: dockerdind
+                    brokers: dockerdind          
 
 eureka:
   client:
