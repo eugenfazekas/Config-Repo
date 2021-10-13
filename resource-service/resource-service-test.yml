@@ -1,0 +1,55 @@
+server:
+    port: 4880
+
+logging:
+    level:
+        com : debug
+
+spring:
+    servlet:
+        multipart:
+            max-file-size: 10MB
+            max-request-size: 10MB
+            
+    data:
+        mongodb:
+            authentication-database : db_nx
+            username : John_Woo
+            password : "{cipher}9ab20fcbd9aa12128beb9a67eadea40420b9e3bb576e50e49378277195c7d82f"
+            database : db_nx
+            port : 27017
+            host : dockerdind 
+    zipkin:
+        baseUrl: dockerdind:9411
+    sleuth:
+        sampler:
+            rate: 100
+    cloud:
+        stream:
+            bindings:
+                input:
+                    destination: userDetailsPrepare
+                    content-type: application/json
+                    group: userDetailsPrepareGrup  
+            kafka:
+                binder:
+                    zkNodes: dockerdind
+                    brokers: dockerdind          
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/            
+            
+security:
+    oauth2:
+        client:
+            client-id: resourceserver
+            client-secret: resourceserversecret
+        resource:
+            jwt:
+                key-uri: http://localhost:4800/oauth/token_key 
+
+redisserver:
+    server: dockerdind
+    port: 6379                
