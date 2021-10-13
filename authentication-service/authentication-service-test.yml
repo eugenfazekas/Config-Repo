@@ -42,8 +42,7 @@ spring:
           content-type: application/json 
       kafka:
         binder:
-          zkNodes: dockerdind
-          brokers: dockerdind    
+          brokers: "dockerdind:9094"     
 
 eureka:
   client:
