@@ -33,7 +33,7 @@ spring:
                     group: userDetailsPrepareGrup  
             kafka:
                 binder:
-                    brokers: "localhost:9094"          
+                    brokers: "dockerdind:9094"          
 
 eureka:
   client:
