@@ -12,7 +12,7 @@ keystore:
  
 spring:
   datasource: 
-    url: "postgres:5432"
+    url: "postgres-statefulset-0:5432"
     username: "postgres"
     password: "{cipher}aae90af54edb4b8755c97279e9b578b32b28335f5f09ebbffd3b647731e85f4d"
   database:
@@ -42,8 +42,7 @@ spring:
           content-type: application/json 
       kafka:
         binder:
-          zkNodes: kafkaserver
-          brokers: kafkaserver    
+          brokers: kafkaserver-statefulset-0
 
 eureka:
   client:

@@ -18,7 +18,7 @@ spring:
             password : "{cipher}9ab20fcbd9aa12128beb9a67eadea40420b9e3bb576e50e49378277195c7d82f"
             database : db_nx
             port : 27017
-            host : mongodb:27017
+            host : mongodb-statefulset-0:27017
     zipkin:
         baseUrl: http://zipkin:9411
     sleuth:
@@ -33,8 +33,7 @@ spring:
                     group: userDetailsPrepareGrup  
             kafka:
                 binder:
-                    zkNodes: kafkaserver
-                    brokers: kafkaserver  
+                    brokers: kafkaserver-statefulset-0
                 
 eureka:
   client:
