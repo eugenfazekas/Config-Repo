@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    preferIpAddress: true
+    hostname: gatewayserver
   client:
     registerWithEureka: true
     fetchRegistry: true

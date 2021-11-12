@@ -39,6 +39,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://eurekaserver:8761/eureka/
+  instance:
+    hostname: resourceservice
 
 security:
     oauth2:
