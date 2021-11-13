@@ -2,13 +2,15 @@ server:
   port: 5555
 
 eureka:
-  instance:
-    instance-id: gatewayserver:${spring.application.instance_id:${random.value}}  
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://eurekaserver:8761/eureka/
+    instance:
+        instance-id: gatewayserver:${spring.application.instance_id:${random.value}} 
+    instance:
+        preferIpAddress: true        
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: http://eurekaserver:8761/eureka/
       
 spring:
   zipkin:
