@@ -3,9 +3,7 @@ server:
 
 eureka:
     instance:
-        instance-id: gatewayserver:${spring.application.instance_id:${random.value}} 
-    instance:
-        preferIpAddress: true        
+        instance-id: gatewayserver:${spring.application.instance_id:${random.value}}        
     client:
         registerWithEureka: true
         fetchRegistry: true

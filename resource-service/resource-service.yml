@@ -40,9 +40,7 @@ eureka:
         serviceUrl:
             defaultZone: http://eurekaserver:8761/eureka/
     instance:
-        instance-id: authenticationservice:${spring.application.instance_id:${random.value}}
-    instance:
-        preferIpAddress: true    
+        instance-id: resourceservice:${spring.application.instance_id:${random.value}}  
 
 security:
     oauth2:
