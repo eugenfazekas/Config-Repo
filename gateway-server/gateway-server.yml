@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: gatewayserver
+    instance-id: gatewayserver:${spring.application.instance_id:${random.value}}  
   client:
     registerWithEureka: true
     fetchRegistry: true
