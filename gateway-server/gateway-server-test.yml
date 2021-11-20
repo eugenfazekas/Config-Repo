@@ -23,14 +23,14 @@ spring:
         - id: authentication-service
           uri: lb://authentication-service
           predicates:
-          - Path=/api1/**
+          - Path=/gatewaytoapi1/**
           filters:
-          - RewritePath=/api1/(?<path>.*), /$\{path}
+          - RewritePath=/gatewaytoapi1/(?<path>.*), /$\{path}
           - RemoveRequestHeader= Cookie,Set-Cookie
         - id: resource-service
           uri: lb://resource-service
           predicates:
-          - Path=/api2/**
+          - Path=/gatewaytoapi2/**
           filters:
-          - RewritePath=/api2/(?<path>.*), /$\{path}
+          - RewritePath=/gatewaytoapi2/(?<path>.*), /$\{path}
           - RemoveRequestHeader= Cookie,Set-Cookie
