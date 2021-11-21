@@ -4,7 +4,6 @@ server:
     enabled: true
     key-alias: scg
     key-store-password: scg1234
-    key-store: classpath:scg-keystore.p12
     key-store-type: PKCS12
 
 eureka:
