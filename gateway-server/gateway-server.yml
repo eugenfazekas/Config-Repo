@@ -3,7 +3,7 @@ server:
   ssl:
     enabled: true
     key-alias: scg
-    key-store-password: scg1234
+    key-store-password: "scg1234"
     key-store: classpath:keystore/scg-keystore.p12
     key-store-type: PKCS12
 
