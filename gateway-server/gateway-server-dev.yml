@@ -2,19 +2,19 @@ server:
   port: 5555
   ssl:
     enabled: true
-    key-alias: scg
-    key-store-password: "scg1234"
-    key-store: classpath:keystore/scg-keystore.p12
+    key-alias: springcloud
+    key-store-password: "springcloud"
+    key-store: classpath:keystore/springcloud.p12
     key-store-type: PKCS12
 
 eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+    instance:
+        preferIpAddress: true
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
       
 spring:
   zipkin:
