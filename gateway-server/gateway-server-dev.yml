@@ -1,11 +1,5 @@
 server:
   port: 5555
-  ssl:
-    enabled: true
-    key-alias: springcloud
-    key-store-password: "springcloud"
-    key-store: classpath:keystore/springcloud.p12
-    key-store-type: PKCS12
 
 eureka:
     instance:
