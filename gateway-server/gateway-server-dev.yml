@@ -10,11 +10,6 @@ eureka:
         serviceUrl:
             defaultZone: http://localhost:8761/eureka/
 
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty.http.client: DEBUG
-
 spring:
   zipkin:
     baseUrl: http://localhost:9411
