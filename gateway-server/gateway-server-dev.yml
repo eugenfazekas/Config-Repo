@@ -1,5 +1,11 @@
 server:
   port: 5555
+  ssl:
+        enabled: true
+        key-store-type: PKCS12
+        key-store: classpath:keystore/domain.p12
+        key-alias: skipper
+        key-store-password: skipperpassword
 
 eureka:
     instance:
@@ -34,3 +40,6 @@ spring:
           filters:
           - RewritePath=/gatewaytoapi2/(?<path>.*), /$\{path}
           - RemoveRequestHeader= Cookie,Set-Cookie
+        httpclient:
+            ssl:
+              useInsecureTrustManager: true
