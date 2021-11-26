@@ -7,7 +7,7 @@ server:
         key-alias: skipper
         key-store-password: skipperpassword
         trust-store: C:\Program Files\Java\jdk-11.0.11\lib\security\cacerts
-        trust-store-password: skipperpassword
+        trust-store-password: changeit
 
 eureka:
     instance:
