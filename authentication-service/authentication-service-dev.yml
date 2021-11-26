@@ -1,14 +1,5 @@
 server:
     port: 4800
-    ssl:
-        enabled: true
-        key-store-type: PKCS12
-        key-store: classpath:keystore/domain.p12
-        key-alias: skipper
-        key-store-password: skipperpassword
-        trust-store: C:\Program Files\Java\jdk-11.0.11\lib\security\cacerts
-        trust-store-password: changeit
-
 
 logging:
     level: 
