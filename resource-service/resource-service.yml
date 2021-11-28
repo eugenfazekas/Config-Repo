@@ -1,5 +1,12 @@
 server:
     port: 4880
+    ssl:
+        key-alias: skipper
+        key-store-type: PKCS12
+        key-store: classpath:keystore/domain.p12
+        key-store-password: skipperpassword
+        trust-store: classpath:keystore/truststore
+        trust-store-password:  skipperpassword
 
 logging:
     level:
@@ -49,7 +56,7 @@ security:
             client-secret: resourceserversecret
         resource:
             jwt:
-                key-uri: http://authenticationservice:4800/oauth/token_key  
+                key-uri: https://authenticationservice:4800/oauth/token_key
 
 redisserver:
     server: redisserver
