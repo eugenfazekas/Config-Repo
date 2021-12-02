@@ -63,7 +63,7 @@ emailservice:
   text1en: Dear
   text2en: "Thanks for you're registration to our website, and you can sign is with the followed username: "
   text3en: You can activate you're account by the followed link    
-  validationLink: http://example.com:443/gatewaytoapi1/api1/v1/user/userKeyCheck/  
+  validationLink: https://example.com/gatewaytoapi1/api1/v1/user/userKeyCheck/
 
 client:
   secret: secret 
