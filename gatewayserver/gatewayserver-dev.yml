@@ -27,15 +27,15 @@ spring:
     loadbalancer.ribbon.enabled: false
     gateway:
         routes:
-        - id: authentication-service
-          uri: lb://authentication-service
+        - id: authenticationservice
+          uri: lb://authenticationservice
           predicates:
           - Path=/gatewaytoapi1/**
           filters:
           - RewritePath=/gatewaytoapi1/(?<path>.*), /$\{path}
           - RemoveRequestHeader= Cookie,Set-Cookie
-        - id: resource-service
-          uri: lb://resource-service
+        - id: resourceservice
+          uri: lb://resourceservice
           predicates:
           - Path=/gatewaytoapi2/**
           filters:
