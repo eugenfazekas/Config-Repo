@@ -71,5 +71,5 @@ client:
 resourceService:
   client-id: resourceserver
   client-secret: resourceserversecret
-  createUserResourceUrl: https://resource-service/api2/v1/user/createUserResource
+  createUserResourceUrl: https://resourceservice/api2/v1/user/createUserResource
 
