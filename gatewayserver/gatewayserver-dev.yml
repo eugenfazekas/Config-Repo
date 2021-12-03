@@ -9,8 +9,6 @@ server:
       trust-store-password:  skipperpassword
 
 eureka:
-    instance:
-        preferIpAddress: true
     client:
         registerWithEureka: true
         fetchRegistry: true

@@ -8,9 +8,7 @@ server:
       trust-store: classpath:keystore/truststore
       trust-store-password:  skipperpassword
 
-eureka:
-    instance:
-        instance-id: gatewayserver:${spring.application.instance_id:${random.value}}        
+eureka:    
     client:
         registerWithEureka: true
         fetchRegistry: true

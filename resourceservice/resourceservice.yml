@@ -46,8 +46,6 @@ eureka:
     client:
         serviceUrl:
             defaultZone: http://eurekaserver:8761/eureka/
-    instance:
-        instance-id: resourceservice:${random.value}  
 
 security:
     oauth2:
