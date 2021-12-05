@@ -15,7 +15,9 @@ eureka:
         serviceUrl:
             defaultZone: http://eurekaserver:8761/eureka/
     instance:
-        instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}             
+        hostname: gatewayserver
+    instance:
+        instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}
 
 spring:
   zipkin:
