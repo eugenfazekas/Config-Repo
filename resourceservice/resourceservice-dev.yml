@@ -48,8 +48,8 @@ eureka:
         serviceUrl:
             defaultZone: http://localhost:8761/eureka/
     instance:
-        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-        securePortEnabled: true
+        hostname: gatewayserver
+        instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 
 security:
     oauth2:
