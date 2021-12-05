@@ -57,7 +57,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
     instance:
-        hostname: authenticationservice
         instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}
 
 emailservice:
