@@ -57,7 +57,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
     instance:
-        instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 emailservice:
   subjecten: Demo Project account activation
