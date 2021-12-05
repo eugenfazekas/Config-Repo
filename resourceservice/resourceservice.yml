@@ -48,7 +48,6 @@ eureka:
             defaultZone: http://eurekaserver:8761/eureka/
     instance:
         hostname: resourceservice
-    instance:
         instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}
 
 security:
