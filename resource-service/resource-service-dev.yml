@@ -44,7 +44,9 @@ spring:
                     brokers: localhost
         inetutils:
             ignoredInterfaces:
-                - Hyper-V Virtual Ethernet Adapter          
+                - Hyper.*
+                - docker0
+                - host.*               
             preferredNetworks:
                 - 192.168
             timeout-seconds: 10                 
