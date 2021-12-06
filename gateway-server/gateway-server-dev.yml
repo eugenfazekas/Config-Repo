@@ -17,7 +17,11 @@ eureka:
         securePortEnabled: true
     instance:
         securePortEnabled: true
-        securePort: ${server.port}            
+        securePort: ${server.port}
+        
+logging:
+    level:
+        org.springframework.cloud.commons.util.InetUtils: trace
 
 spring:
   zipkin:
