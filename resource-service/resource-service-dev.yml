@@ -44,7 +44,10 @@ spring:
                     brokers: localhost
         inetutils:
             ignored-interfaces:
-                - Hyper-V Virtual Ethernet Adapter                    
+                - Hyper-V.*  
+                - docker0
+            preferredNetworks:
+                - 192.168                    
 
 eureka:
     client:

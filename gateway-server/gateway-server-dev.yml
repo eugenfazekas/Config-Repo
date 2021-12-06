@@ -51,7 +51,10 @@ spring:
               - RemoveRequestHeader= Cookie,Set-Cookie
         inetutils:
             ignored-interfaces:
-                - Hyper-V Virtual Ethernet Adapter  
+                - Hyper-V.*  
+                - docker0
+            preferredNetworks:
+                - 192.168    
     httpclient:
         ssl:
           useInsecureTrustManager: true
