@@ -54,9 +54,9 @@ spring:
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://eurekaserver:8761/eureka/
+            defaultZone: http://eureka-server:8761/eureka/
     instance:
-        hostname: authenticationservice
+        hostname: authentication-service
         instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 
 emailservice:
@@ -72,5 +72,5 @@ client:
 resourceService:
   client-id: resourceserver
   client-secret: resourceserversecret
-  createUserResourceUrl: https://resourceservice/api2/v1/user/createUserResource
+  createUserResourceUrl: https://resource-service/api2/v1/user/createUserResource
 

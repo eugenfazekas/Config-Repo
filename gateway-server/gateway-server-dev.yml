@@ -8,19 +8,16 @@ server:
       trust-store: classpath:keystore/truststore
       trust-store-password:  skipperpassword
 
-eureka:    
+eureka:
     client:
         registerWithEureka: true
         fetchRegistry: true
         serviceUrl:
-            defaultZone: http://eurekaserver:8761/eureka/
-    instance:
-        hostname: gatewayserver
-        instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+            defaultZone: http://localhost:8761/eureka/
 
 spring:
   zipkin:
-    baseUrl: http://zipkin:9411
+    baseUrl: http://localhost:9411
   sleuth:
     sampler:
       percentage: 1
@@ -28,15 +25,15 @@ spring:
     loadbalancer.ribbon.enabled: false
     gateway:
         routes:
-        - id: authenticationservice
-          uri: lb://authenticationservice
+        - id: authentication-service
+          uri: lb://authentication-service
           predicates:
           - Path=/gatewaytoapi1/**
           filters:
           - RewritePath=/gatewaytoapi1/(?<path>.*), /$\{path}
           - RemoveRequestHeader= Cookie,Set-Cookie
-        - id: resourceservice
-          uri: lb://resourceservice
+        - id: resource-service
+          uri: lb://resource-service
           predicates:
           - Path=/gatewaytoapi2/**
           filters:

@@ -45,9 +45,9 @@ spring:
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://eurekaserver:8761/eureka/
+            defaultZone: http://eureka-server:8761/eureka/
     instance:
-        hostname: resourceservice
+        hostname: resource-service
         instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 
 security:
@@ -57,7 +57,7 @@ security:
             client-secret: resourceserversecret
         resource:
             jwt:
-                key-uri: https://authenticationservice:4800/oauth/token_key
+                key-uri: https://authentication-service:4800/oauth/token_key
 
 redisserver:
     server: redisserver
