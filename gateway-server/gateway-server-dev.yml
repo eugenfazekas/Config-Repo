@@ -51,7 +51,7 @@ spring:
               - RemoveRequestHeader= Cookie,Set-Cookie
         inetutils:
             ignored-interfaces:
-                - Hyper-V*
+                - Hyper.*
                 - docker0
             preferredNetworks:
                 - 192.168
