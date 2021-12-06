@@ -51,10 +51,11 @@ spring:
               - RemoveRequestHeader= Cookie,Set-Cookie
         inetutils:
             ignored-interfaces:
-                - Hyper-V.*  
+                - Hyper-V*
                 - docker0
             preferredNetworks:
-                - 192.168    
+                - 192.168
+            timeout-seconds: 10        
     httpclient:
         ssl:
           useInsecureTrustManager: true
