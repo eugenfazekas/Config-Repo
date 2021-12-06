@@ -47,6 +47,10 @@ eureka:
     client:
         serviceUrl:
             defaultZone: http://localhost:8761/eureka/
+        securePortEnabled: true
+    instance:
+        securePortEnabled: true
+        securePort: ${server.port}            
             
 security:
     oauth2:
