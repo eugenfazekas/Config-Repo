@@ -51,7 +51,7 @@ spring:
               - RemoveRequestHeader= Cookie,Set-Cookie
         inetutils:
             ignoredInterfaces:
-                - Hyper.*              
+                - Hyper-V Virtual Ethernet Adapter              
             preferredNetworks:
                 - 192.168
             timeout-seconds: 10        
