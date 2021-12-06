@@ -43,10 +43,8 @@ spring:
                     zkNodes: localhost
                     brokers: localhost
         inetutils:
-            ignored-interfaces:
-                - Hyper.*
-                - docker0
-                - host.*               
+            ignoredInterfaces:
+                - Hyper.*          
             preferredNetworks:
                 - 192.168
             timeout-seconds: 10                 
