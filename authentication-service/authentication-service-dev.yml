@@ -53,7 +53,7 @@ spring:
                     brokers: localhost
     inetutils:
         ignored-interfaces:
-            - Hyper-V* 
+            - Hyper-V Virtual Ethernet Adapter 
           
 eureka:
     client:

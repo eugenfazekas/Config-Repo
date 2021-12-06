@@ -51,7 +51,7 @@ spring:
               - RemoveRequestHeader= Cookie,Set-Cookie
         inetutils:
             ignored-interfaces:
-                - Hyper-V*  
+                - Hyper-V Virtual Ethernet Adapter  
     httpclient:
         ssl:
           useInsecureTrustManager: true
