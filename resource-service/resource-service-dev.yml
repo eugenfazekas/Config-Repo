@@ -50,7 +50,12 @@ eureka:
         securePortEnabled: true
     instance:
         securePortEnabled: true
-        securePort: ${server.port}            
+        securePort: ${server.port}
+spring:
+    cloud:
+        inetutils:
+            ignored-interfaces:
+                - Hyper-V*        
             
 security:
     oauth2:

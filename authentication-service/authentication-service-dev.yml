@@ -61,6 +61,12 @@ eureka:
         securePortEnabled: true
         securePort: ${server.port}
 
+spring:
+    cloud:
+        inetutils:
+            ignored-interfaces:
+                - Hyper-V*        
+
 emailservice:
   subjecten: Demo Project account activation
   text1en: Dear

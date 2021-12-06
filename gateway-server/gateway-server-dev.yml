@@ -22,6 +22,12 @@ eureka:
 logging:
     level:
         org.springframework.cloud.commons.util.InetUtils: trace
+        
+spring:
+    cloud:
+        inetutils:
+            ignored-interfaces:
+                - Hyper-V*
 
 spring:
   zipkin:
