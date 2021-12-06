@@ -22,37 +22,38 @@ eureka:
 logging:
     level:
         org.springframework.cloud.commons.util.InetUtils: trace
-        
-spring:
-    cloud:
-        inetutils:
-            ignored-interfaces:
-                - Hyper-V*
+
+
 
 spring:
-  zipkin:
-    baseUrl: http://localhost:9411
-  sleuth:
-    sampler:
-      percentage: 1
-  cloud:
-    loadbalancer.ribbon.enabled: false
-    gateway:
-        routes:
-        - id: authentication-service
-          uri: lb://authentication-service
-          predicates:
-          - Path=/gatewaytoapi1/**
-          filters:
-          - RewritePath=/gatewaytoapi1/(?<path>.*), /$\{path}
-          - RemoveRequestHeader= Cookie,Set-Cookie
-        - id: resource-service
-          uri: lb://resource-service
-          predicates:
-          - Path=/gatewaytoapi2/**
-          filters:
-          - RewritePath=/gatewaytoapi2/(?<path>.*), /$\{path}
-          - RemoveRequestHeader= Cookie,Set-Cookie
-        httpclient:
-            ssl:
-              useInsecureTrustManager: true
+    zipkin:
+        baseUrl: http://localhost:9411
+    sleuth:
+        sampler:
+            percentage: 1
+    cloud:
+        loadbalancer.ribbon.enabled: false
+        gateway:
+            routes:
+            - id: authentication-service
+              uri: lb://authentication-service
+              predicates:
+              - Path=/gatewaytoapi1/**
+              filters:
+              - RewritePath=/gatewaytoapi1/(?<path>.*), /$\{path}
+              - RemoveRequestHeader= Cookie,Set-Cookie
+            - id: resource-service
+              uri: lb://resource-service
+              predicates:
+              - Path=/gatewaytoapi2/**
+              filters:
+              - RewritePath=/gatewaytoapi2/(?<path>.*), /$\{path}
+              - RemoveRequestHeader= Cookie,Set-Cookie
+        inetutils:
+            ignored-interfaces:
+                - Hyper-V*  
+    httpclient:
+        ssl:
+          useInsecureTrustManager: true
+                  
+              

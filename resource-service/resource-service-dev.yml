@@ -41,7 +41,10 @@ spring:
             kafka:
                 binder:
                     zkNodes: localhost
-                    brokers: localhost          
+                    brokers: localhost
+        inetutils:
+            ignored-interfaces:
+                - Hyper-V*                    
 
 eureka:
     client:
@@ -51,11 +54,7 @@ eureka:
     instance:
         securePortEnabled: true
         securePort: ${server.port}
-spring:
-    cloud:
-        inetutils:
-            ignored-interfaces:
-                - Hyper-V*        
+       
             
 security:
     oauth2:
