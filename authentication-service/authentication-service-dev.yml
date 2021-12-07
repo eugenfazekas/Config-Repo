@@ -71,6 +71,7 @@ eureka:
         prefer-ip-address: true        
         securePortEnabled: true
         securePort: ${server.port}
+        nonSecurePortEnabled: false
 
 emailservice:
     subjecten: Demo Project account activation
@@ -85,4 +86,4 @@ client:
 resourceService:
     client-id: resourceserver
     client-secret: resourceserversecret
-    createUserResourceUrl: https://resource-service/api2/v1/user/createUserResource
+    createUserResourceUrl: https://RESOURCE-SERVICE/api2/v1/user/createUserResource

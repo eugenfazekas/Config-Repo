@@ -13,6 +13,7 @@ eureka:
         instance-id: ${spring.application.name}:${server.port}
         securePortEnabled: true
         securePort: ${server.port}
+        nonSecurePortEnabled: false
         
 logging:
     level:

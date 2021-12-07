@@ -51,11 +51,11 @@ eureka:
             defaultZone: http://localhost:8761/eureka/
         securePortEnabled: true
     instance:
-        hostname: resource-service
         instance-id: ${spring.application.name}:${server.port}
         prefer-ip-address: true
         securePortEnabled: true
         securePort: ${server.port}
+        nonSecurePortEnabled: false
            
 security:
     oauth2:
