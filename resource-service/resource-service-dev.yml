@@ -53,7 +53,10 @@ eureka:
         hostname: localhost    
         securePortEnabled: true
         securePort: ${server.port}
-       
+
+logging:
+    level:
+        org.springframework.cloud.commons.util.InetUtils: trace       
             
 security:
     oauth2:
