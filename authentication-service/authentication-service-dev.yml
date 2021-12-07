@@ -56,9 +56,8 @@ spring:
             ignored-interfaces:
                 - Hyper.*
                 - docker0
-                - host.*
             preferred-networks:
-                - localhost
+                - 192.168
             timeout-seconds: 10                 
           
 eureka:

@@ -45,10 +45,9 @@ spring:
         inetutils:
             ignored-interfaces:
                 - Hyper.*
-                - docker0
-                - host.*                
+                - docker0               
             preferred-networks:
-                - localhost
+                - 192.168
             timeout-seconds: 10        
     httpclient:
         ssl:
