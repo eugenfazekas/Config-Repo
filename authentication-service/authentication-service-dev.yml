@@ -51,14 +51,7 @@ spring:
             kafka:
                 binder:
                     zkNodes: localhost
-                    brokers: localhost
-        inetutils:
-            ignored-interfaces:
-                - Hyper.*
-                - docker0
-            preferred-networks:
-                - 192.168
-            timeout-seconds: 10                 
+                    brokers: localhost          
           
 eureka:
     client:
@@ -68,7 +61,7 @@ eureka:
             defaultZone: http://localhost:8761/eureka/
         securePortEnabled: true
     instance:
-        hostname: localhost
+        hostname: authentication-service
         instance-id: ${spring.application.name}:${server.port}      
         securePortEnabled: true
         securePort: ${server.port}

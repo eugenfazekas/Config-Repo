@@ -36,13 +36,6 @@ spring:
                 binder:
                     zkNodes: localhost
                     brokers: localhost
-        inetutils:
-            ignored-interfaces:
-                - Hyper.*
-                - docker0             
-            preferred-networks:
-                - 192.168
-            timeout-seconds: 10                 
 
 eureka:
     client:

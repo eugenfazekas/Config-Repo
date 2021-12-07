@@ -9,7 +9,7 @@ eureka:
             defaultZone: http://localhost:8761/eureka/
         securePortEnabled: true
     instance:
-        hostname: localhost     
+        hostname: gateway-server     
         instance-id: ${spring.application.name}:${server.port}
         securePortEnabled: true
         securePort: ${server.port}
@@ -42,16 +42,9 @@ spring:
               - Path=/gatewaytoapi2/**
               filters:
               - RewritePath=/gatewaytoapi2/(?<path>.*), /$\{path}
-              - RemoveRequestHeader= Cookie,Set-Cookie
-        inetutils:
-            ignored-interfaces:
-                - Hyper.*
-                - docker0               
-            preferred-networks:
-                - 192.168
-            timeout-seconds: 10        
-    httpclient:
-        ssl:
-          useInsecureTrustManager: true
+              - RemoveRequestHeader= Cookie,Set-Cookie       
+            httpclient:
+                ssl:
+                  useInsecureTrustManager: true
                   
               
