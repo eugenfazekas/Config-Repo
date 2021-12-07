@@ -4,6 +4,7 @@ server:
 logging:
     level:
         com : debug
+        org.springframework.cloud.commons.util.InetUtils: trace 
 
 spring:
     servlet:
@@ -53,9 +54,7 @@ eureka:
         securePortEnabled: true
         securePort: ${server.port}
 
-logging:
-    level:
-        org.springframework.cloud.commons.util.InetUtils: trace       
+              
             
 security:
     oauth2:
