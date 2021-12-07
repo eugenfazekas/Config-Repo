@@ -4,7 +4,7 @@ server:
 logging:
     level:
         com : debug
-        org.springframework.cloud.commons.util.InetUtils: trace 
+        org.springframework.cloud.commons.util.InetUtils: trace
 
 spring:
     servlet:
@@ -50,12 +50,11 @@ eureka:
         serviceUrl:
             defaultZone: http://localhost:8761/eureka/
         securePortEnabled: true
-    instance:    
+    instance:
+        hostname: resource-service    
         securePortEnabled: true
         securePort: ${server.port}
-
-              
-            
+           
 security:
     oauth2:
         client:
