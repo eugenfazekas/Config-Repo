@@ -39,13 +39,13 @@ spring:
 
 eureka:
     client:
-        registerWithEureka: true
-        fetchRegistry: true
+        register-with-eureka: true
+        fetch-registry: true
         serviceUrl:
             defaultZone: http://localhost:8761/eureka/
         securePortEnabled: true
     instance:
-        hostname: resource-service  
+        hostname: host.docker.internal  
         instance-id: ${spring.application.name}:${server.port}
         securePortEnabled: true
         securePort: ${server.port}
