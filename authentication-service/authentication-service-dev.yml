@@ -11,6 +11,7 @@ server:
 logging:
     level: 
         com: debug
+        org.springframework.cloud.commons.util.InetUtils: trace 
 
 keystore:
     password: password
@@ -69,10 +70,6 @@ eureka:
         hostname: localhost    
         securePortEnabled: true
         securePort: ${server.port}
-
-logging:
-    level:
-        org.springframework.cloud.commons.util.InetUtils: trace        
 
 emailservice:
     subjecten: Demo Project account activation
