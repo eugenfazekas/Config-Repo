@@ -51,8 +51,6 @@ eureka:
             defaultZone: http://localhost:8761/eureka/
         securePortEnabled: true
     instance:
-        hostname: localhost
-        virtualHostName: resource-service
         securePortEnabled: true
         securePort: ${server.port}
            
