@@ -41,13 +41,18 @@ spring:
                 - docker0
                 - host.*               
             preferred-networks:
-                - 192.168
+                - localhost
             timeout-seconds: 10                 
 
 eureka:
     client:
         serviceUrl:
             defaultZone: http://localhost:8761/eureka/
+        securePortEnabled: true
+    instance:
+        hostname: localhost    
+        securePortEnabled: true
+        securePort: ${server.port}
        
             
 security:
