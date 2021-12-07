@@ -1,6 +1,9 @@
 server:
     port: 5555
-
+    ssl:
+        trust-store: classpath:keystore/truststore
+        trust-store-password:  skipperpassword
+        
 eureka:
     client:
         register-with-eureka: true
