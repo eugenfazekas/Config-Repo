@@ -50,11 +50,11 @@ spring:
               - RewritePath=/gatewaytoapi2/(?<path>.*), /$\{path}
               - RemoveRequestHeader= Cookie,Set-Cookie
         inetutils:
-            ignoredInterfaces:
+            ignored-interfaces:
                 - Hyper.*
                 - docker0
                 - host.*                
-            preferredNetworks:
+            preferred-networks:
                 - 192.168
             timeout-seconds: 10        
     httpclient:
