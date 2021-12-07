@@ -52,6 +52,7 @@ eureka:
         securePortEnabled: true
     instance:
         instance-id: ${spring.application.name}:${server.port}
+        prefer-ip-address: true
         securePortEnabled: true
         securePort: ${server.port}
            
