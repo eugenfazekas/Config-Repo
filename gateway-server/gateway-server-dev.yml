@@ -1,9 +1,10 @@
 server:
     port: 5555
     ssl:
+        ciphers: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
         trust-store: classpath:keystore/truststore
         trust-store-password:  skipperpassword
-        
+
 eureka:
     client:
         register-with-eureka: true
