@@ -7,7 +7,6 @@ server:
         key-store-password: skipperpassword
         trust-store: classpath:keystore/truststore
         trust-store-password:  skipperpassword
-        client-auth: need
 
 logging:
     level:
