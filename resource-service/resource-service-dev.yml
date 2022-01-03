@@ -1,12 +1,12 @@
 server:
     port: 4880
     ssl:
-        key-alias: skipper
-        key-store-type: PKCS12
-        key-store: classpath:keystore/domain.p12
-        key-store-password: skipperpassword
-        trust-store: classpath:keystore/truststore
-        trust-store-password:  skipperpassword
+        key-alias: resource_service
+        key-store: classpath:keystore/resource_service.jks
+        key-store-password: resourceservicepassword
+        trust-store: classpath:keystore/truststore.jks
+        trust-store-password:  authoritypassword
+        client-auth: need
 
 logging:
     level:
