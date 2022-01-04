@@ -4,8 +4,8 @@ server:
         key-alias: authentication_service
         key-store: classpath:keystore/authentication_service.jks
         key-store-password: authenticationservicepassword
-        trust-store: classpath:keystore/truststore.jks
-        trust-store-password:  authoritypassword
+        trust-store: classpath:keystore/cacerts
+        trust-store-password: changeit
         client-auth: need
 
 logging:

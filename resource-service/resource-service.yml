@@ -4,8 +4,8 @@ server:
         key-alias: resource_service
         key-store: classpath:keystore/resource_service.jks
         key-store-password: resourceservicepassword
-        trust-store: classpath:keystore/truststore.jks
-        trust-store-password:  authoritypassword
+        trust-store: classpath:keystore/cacerts
+        trust-store-password: changeit
         client-auth: need
 
 logging:

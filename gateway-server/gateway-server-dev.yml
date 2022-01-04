@@ -4,8 +4,8 @@ server:
         key-alias: gateway_server
         key-store: classpath:keystore/gateway_server.jks
         key-store-password: gatewayserverpassword
-        trust-store: classpath:keystore/truststore.jks
-        trust-store-password:  authoritypassword
+        trust-store: classpath:keystore/cacerts
+        trust-store-password: changeit
 
 eureka:
     client:
