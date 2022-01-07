@@ -2,10 +2,10 @@ server:
     port: 5555
     ssl:
         key-alias: gateway_server
-        key-store: classpath:keystore/gateway_server.jks
+        key-store: src/main/resources/keystore/gateway_server.jks
         key-store-password: gatewayserverpassword
-        trust-store: classpath:keystore/cacerts
-        trust-store-password: changeit
+        trust-store: src/main/resources/keystore/truststore.jks
+        trust-store-password: authoritypassword
 
 eureka:
     client:

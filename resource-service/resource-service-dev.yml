@@ -2,10 +2,10 @@ server:
     port: 4880
     ssl:
         key-alias: resource_service
-        key-store: classpath:keystore/resource_service.jks
+        key-store: src/main/resources/keystore/resource_service.jks
         key-store-password: resourceservicepassword
-        trust-store: classpath:keystore/cacerts
-        trust-store-password: changeit
+        trust-store: src/main/resources/keystore/truststore.jks
+        trust-store-password: authoritypassword
         client-auth: need
 
 logging:
