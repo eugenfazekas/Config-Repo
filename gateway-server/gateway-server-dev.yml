@@ -6,7 +6,7 @@ server:
         key-store-password: gatewayserverpassword
         trust-store: src/main/resources/keystore/cacerts
         trust-store-password: changeit
-        client-auth: need
+
 eureka:
     client:
         register-with-eureka: true
@@ -52,7 +52,7 @@ spring:
             httpclient:
                 ssl:
                     handshake-timeout-millis: 10000
-                    close-notify-flush-timeout-millis: 3000
-                    close-notify-read-timeout-millis: 0
+                    close-notify-flush-timeout-millis: 10000
+                    close-notify-read-timeout-millis: 10000
                   
               
