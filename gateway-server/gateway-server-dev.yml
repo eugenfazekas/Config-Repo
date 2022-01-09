@@ -51,6 +51,8 @@ spring:
               - RemoveRequestHeader= Cookie,Set-Cookie       
             httpclient:
                 ssl:
-                  useInsecureTrustManager: true
+                    handshake-timeout-millis: 10000
+                    close-notify-flush-timeout-millis: 3000
+                    close-notify-read-timeout-millis: 0
                   
               
