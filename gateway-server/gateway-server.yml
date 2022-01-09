@@ -2,9 +2,8 @@ server:
     port: 5555
     ssl:
         key-alias: gateway_server
-        key-store: src/main/resources/keystore/gateway_server.p12
+        key-store: src/main/resources/keystore/gateway_server.jks
         key-store-password: gatewayserverpassword
-        key-store-type: PKCS12
         trust-store: src/main/resources/keystore/cacerts
         trust-store-password: changeit
 

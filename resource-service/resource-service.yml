@@ -2,9 +2,8 @@ server:
     port: 4880
     ssl:
         key-alias: resource_service
-        key-store: src/main/resources/keystore/resource_service.p12
+        key-store: src/main/resources/keystore/resource_service.jks
         key-store-password: resourceservicepassword
-        key-store-type: PKCS12
         trust-store: src/main/resources/keystore/cacerts
         trust-store-password: changeit
         client-auth: need

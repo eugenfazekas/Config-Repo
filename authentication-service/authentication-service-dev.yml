@@ -2,9 +2,8 @@ server:
     port: 4800
     ssl:
         key-alias: authentication_service
-        key-store: src/main/resources/keystore/authentication_service.p12
+        key-store: src/main/resources/keystore/authentication_service.jks
         key-store-password: authenticationservicepassword
-        key-store-type: PKCS12
         trust-store: src/main/resources/keystore/cacerts
         trust-store-password: changeit
         client-auth: need
