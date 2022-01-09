@@ -6,6 +6,7 @@ server:
         key-store-password: gatewayserverpassword
         trust-store: src/main/resources/keystore/cacerts
         trust-store-password: changeit
+        client-auth: need
 
 eureka:    
     client:
