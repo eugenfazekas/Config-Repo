@@ -5,8 +5,8 @@ server:
         key-store: src/main/resources/keystore/resource_service.p12
         key-store-password: resourceservicepassword
         key-store-type: PKCS12
-        trust-store: src/main/resources/keystore/truststore.jks
-        trust-store-password: authoritypassword
+        trust-store: src/main/resources/keystore/cacerts
+        trust-store-password: changeit
         client-auth: need
 
 logging:
