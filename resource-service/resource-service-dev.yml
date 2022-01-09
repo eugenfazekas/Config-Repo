@@ -2,7 +2,7 @@ server:
     port: 4880
     ssl:
         key-alias: resource_service
-        key-store: src/main/resources/keystore/resource_service.jks
+        key-store: src/main/resources/keystore/resource_service.p12
         key-store-password: resourceservicepassword
         key-store-type: PKCS12
         trust-store: src/main/resources/keystore/truststore.jks
