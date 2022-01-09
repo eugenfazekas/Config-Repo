@@ -4,8 +4,9 @@ server:
         key-alias: authentication_service
         key-store: src/main/resources/keystore/authentication_service.jks
         key-store-password: authenticationservicepassword
-        trust-store: src/main/resources/keystore/cacerts
-        trust-store-password: changeit
+        key-store-type: PKCS12
+        trust-store: src/main/resources/keystore/truststore.jks
+        trust-store-password: authoritypassword
         client-auth: need
 
 logging:

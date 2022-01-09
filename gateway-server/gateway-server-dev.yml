@@ -4,8 +4,9 @@ server:
         key-alias: gateway_server
         key-store: src/main/resources/keystore/gateway_server.jks
         key-store-password: gatewayserverpassword
-        trust-store: src/main/resources/keystore/cacerts
-        trust-store-password: changeit
+        key-store-type: PKCS12
+        trust-store: src/main/resources/keystore/truststore.jks
+        trust-store-password: authoritypassword
 
 eureka:
     client:
