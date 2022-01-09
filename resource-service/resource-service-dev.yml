@@ -6,7 +6,7 @@ server:
         key-store-password: resourceservicepassword
         trust-store: src/main/resources/keystore/cacerts
         trust-store-password: changeit
-        client-auth: need
+       #client-auth: need
 
 logging:
     level:
