@@ -1,6 +1,7 @@
 server:
     port: 5555
     ssl:
+        enabled: true
         key-alias: gateway_server
         key-store: src/main/resources/keystore/gateway_server.jks
         key-store-password: gatewayserverpassword
