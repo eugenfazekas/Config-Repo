@@ -6,10 +6,9 @@ server:
         key-store: src/main/resources/keystore/gateway_server.jks
         key-store-password: gatewayserverpassword
         trust-store: src/main/resources/keystore/cacerts
-        trust-store-password: changeit
-        client-auth: need        
+        trust-store-password: changeit      
 
-eureka:    
+eureka:
     client:
         registerWithEureka: true
         fetchRegistry: true
